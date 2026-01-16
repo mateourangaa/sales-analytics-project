@@ -1,0 +1,6 @@
+deal_id,account_id,deal_stage,stage_entry_date,deal_value,close_date
+1000,299,Proposal,2025-10-18,49382,
+1002,191,Prospect,2025-12-06,49455,
+1004,101,Prospect,2025-10-30,92283,
+1006,244,Prospect,2025-12-29,96079,
+1008,282,Demo,2025-11-22,96454,

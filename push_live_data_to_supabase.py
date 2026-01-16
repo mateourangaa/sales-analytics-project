@@ -20,6 +20,9 @@ cursor = conn.cursor()
 
 df = pd.read_csv("live_deal_data.csv")
 
+df["stage_entry_date"] = df["stage_entry_date"].where(pd.notna(df["stage_entry_date"]), None)
+df["close_date"] = df["close_date"].where(pd.notna(df["close_date"]), None)
+
 for _, row in df.iterrows():
     cursor.execute(
         """
@@ -40,4 +43,5 @@ for _, row in df.iterrows():
 conn.commit()
 cursor.close()
 conn.close()
+
 

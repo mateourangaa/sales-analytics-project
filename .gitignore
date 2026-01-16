@@ -1,0 +1,7 @@
+# Ignore environment files with credentials
+.env
+db_info.env
+
+# Ignore Python cache
+__pycache__/
+*.pyc

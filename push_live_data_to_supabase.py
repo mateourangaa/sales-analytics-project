@@ -2,10 +2,12 @@
 
 import pandas as pd
 import psycopg2
+import live_data_generator
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
+live_data_generator.generateData()
 
 conn = psycopg2.connect(
     host=os.getenv("SUPABASE_HOST"),
@@ -43,5 +45,4 @@ for _, row in df.iterrows():
 conn.commit()
 cursor.close()
 conn.close()
-
 
